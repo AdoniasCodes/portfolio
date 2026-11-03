@@ -1,0 +1,9 @@
+capture/node_modules/
+capture/raw/
+capture/frames/
+qa/
+media/*.webm
+media/*-top.png
+pdf.html
+__pycache__/
+.DS_Store

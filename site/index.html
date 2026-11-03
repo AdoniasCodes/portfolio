@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adonias Nigussie, Web Developer | Website Portfolio</title>
+<meta name="description" content="Websites with 3D, motion and real SEO behind them, built in Addis Ababa for schools, contractors, software companies and shops in Ethiopia, the UK and Italy.">
+<link rel="canonical" href="https://adoniascodes.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Adonias Nigussie, Web Developer">
+<meta property="og:description" content="30+ websites built. See the work, the 3D, and the passion projects.">
+<meta property="og:url" content="https://adoniascodes.github.io/portfolio/">
+<meta property="og:image" content="https://adoniascodes.github.io/portfolio/media/inteltech.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#E6EAEC">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314202A'/%3E%3Cpath d='M18 46 30 16h4l12 30h-6l-3-8H27l-3 8zm11-13h8l-4-11z' fill='%23E8521C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfilePage", "mainEntity": {"@type": "Person", "name": "Adonias Nigussie", "jobTitle": "Web developer", "email": "mailto:adoniasnigussie@gmail.com", "telephone": "+251944721682", "address": {"@type": "PostalAddress", "addressLocality": "Addis Ababa", "addressCountry": "ET"}, "url": "https://adoniascodes.github.io/portfolio/", "sameAs": ["https://github.com/AdoniasCodes", "https://www.linkedin.com/in/adoniasn", "https://adoniascodes.github.io/"]}}</script>
+<style>
+:root{
+  --paper:#E6EAEC; --paper-2:#F4F6F7; --white:#FFFFFF;
+  --ink:#14202A; --muted:#55646F; --line:#C5CED4;
+  --signal:#E8521C; --signal-ink:#B83A0E;
+  --manila:#E2C68C; --manila-2:#C9A660;
+  --shadow:0 34px 70px -36px rgba(20,32,42,.45), 0 4px 14px -6px rgba(20,32,42,.18);
+  --display:'Bricolage Grotesque', 'Hanken Grotesk', system-ui, sans-serif;
+  --text:'Hanken Grotesk', system-ui, sans-serif;
+  --gutter:clamp(16px, 4vw, 56px);
+}
+*{ box-sizing:border-box; margin:0; padding:0; }
+html{ scroll-behavior:smooth; }
+@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
+body{ background:var(--paper); color:var(--ink); font-family:var(--text); font-size:17px; line-height:1.6;
+      -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+img, video{ display:block; max-width:100%; }
+a{ color:inherit; }
+[id]{ scroll-margin-top:72px; }
+:focus-visible{ outline:3px solid var(--signal); outline-offset:3px; border-radius:4px; }
+.wrap{ max-width:1320px; margin:0 auto; padding:0 var(--gutter); }
+
+/* nav */
+.nav{ position:sticky; top:0; z-index:20; background:color-mix(in srgb, var(--paper) 86%, transparent);
+      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid transparent; transition:border-color .2s; }
+.nav.scrolled{ border-bottom-color:var(--line); }
+.nav .wrap{ display:flex; align-items:center; justify-content:space-between; height:64px; gap:16px; }
+.brand{ font-family:var(--display); font-weight:800; font-size:19px; text-decoration:none; letter-spacing:-.01em; }
+.nav ul{ list-style:none; display:flex; gap:28px; align-items:center; }
+.nav ul a{ text-decoration:none; font-weight:500; font-size:15px; }
+.nav ul a:hover{ color:var(--signal-ink); }
+.btn{ display:inline-flex; align-items:center; gap:10px; font:600 15px/1 var(--text); text-decoration:none;
+      padding:14px 22px; border-radius:999px; border:1.5px solid var(--ink); transition:background .2s, color .2s, transform .2s; }
+.btn.solid{ background:var(--signal); border-color:var(--signal); color:#fff; }
+.btn.solid:hover{ background:var(--signal-ink); border-color:var(--signal-ink); }
+.btn.line:hover{ background:var(--ink); color:var(--paper); }
+.btn.sm{ padding:10px 16px; font-size:14px; }
+.btn svg{ width:16px; height:16px; }
+@media (max-width:760px){ .nav ul li.hide-sm{ display:none; } .nav ul{ gap:14px; } }
+
+/* hero */
+.hero{ position:relative; min-height:calc(100svh - 64px); display:flex; align-items:center; overflow:hidden; }
+#ring{ position:absolute; inset:0; width:100%; height:100%; touch-action:pan-y; cursor:grab; }
+#ring.dragging{ cursor:grabbing; }
+.hero .wrap{ position:relative; z-index:2; width:100%; pointer-events:none; }
+.hero-copy{ max-width:640px; pointer-events:auto; padding:48px 0 72px; }
+.hero h1{ font-family:var(--display); font-weight:800; font-size:clamp(52px, 6.6vw, 96px); line-height:.9;
+          letter-spacing:-.035em; font-variation-settings:'opsz' 96; }
+.hero h1 .l2{ display:block; font-weight:400; color:var(--muted); letter-spacing:-.03em; }
+.hero .lede{ margin-top:30px; font-size:19px; max-width:30em; color:#2C3A45; }
+.hero .ctas{ display:flex; flex-wrap:wrap; gap:12px; margin-top:34px; }
+.hero .hint{ margin-top:26px; font-size:14px; color:var(--muted); }
+.hero-fade{ position:absolute; inset:0; z-index:1; pointer-events:none;
+            background:linear-gradient(90deg, var(--paper) 0%, var(--paper) 30%, color-mix(in srgb, var(--paper) 70%, transparent) 46%, transparent 62%); }
+@media (max-width:900px){
+  .hero{ flex-direction:column; align-items:stretch; min-height:auto; }
+  #ring{ position:relative; height:58vh; order:2; }
+  .hero-fade{ display:none; }
+  .hero-copy{ padding:40px 0 8px; }
+}
+
+/* section heads */
+section{ padding:120px 0; }
+.head{ display:grid; grid-template-columns:1fr minmax(0, 480px); gap:24px 64px; align-items:end; margin-bottom:72px; }
+.head h2{ font-family:var(--display); font-weight:800; font-size:clamp(40px, 5.6vw, 80px); line-height:.95; letter-spacing:-.03em; }
+.head p{ color:var(--muted); font-size:18px; }
+@media (max-width:760px){ section{ padding:80px 0; } .head{ grid-template-columns:1fr; margin-bottom:48px; } }
+
+/* browser frame */
+.screen{ background:var(--white); border-radius:12px; overflow:hidden; box-shadow:var(--shadow); border:1px solid #D4DBE0; }
+.bar{ height:34px; background:var(--paper-2); border-bottom:1px solid #DCE2E6; display:flex; align-items:center; justify-content:center; }
+.addr{ font-size:12.5px; color:var(--muted); background:var(--white); border:1px solid #DCE2E6; border-radius:7px;
+       padding:3px 14px; max-width:70%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.view{ aspect-ratio:16/10; background:#DDE3E7; }
+.view video, .view img{ width:100%; height:100%; object-fit:cover; object-position:top; }
+
+/* client projects */
+.proj{ display:grid; grid-template-columns:minmax(0, 7fr) minmax(0, 5fr); gap:64px; align-items:center; padding:56px 0; }
+.proj + .proj{ border-top:1px solid var(--line); }
+.proj.flip .screen{ order:2; }
+.sector{ font-size:14px; color:var(--muted); font-weight:500; }
+.proj h3{ font-family:var(--display); font-weight:800; font-size:clamp(30px, 3.4vw, 46px); line-height:1; letter-spacing:-.025em; margin:8px 0 14px; }
+.role{ font-weight:600; font-size:16px; }
+.note{ margin-top:14px; color:#2C3A45; max-width:36em; }
+.mets{ display:flex; flex-wrap:wrap; gap:14px 34px; margin-top:26px; }
+.mets b{ display:block; font-family:var(--display); font-weight:800; font-size:30px; line-height:1; letter-spacing:-.02em; }
+.mets span{ font-size:14px; color:var(--muted); }
+.stack{ list-style:none; display:flex; flex-wrap:wrap; gap:8px; margin-top:24px; }
+.stack li{ font-size:13px; font-weight:500; padding:5px 11px; border:1px solid var(--line); border-radius:999px; background:var(--paper-2); }
+.visit{ display:inline-block; margin-top:24px; font-weight:600; text-decoration-thickness:1.5px; text-underline-offset:5px; text-decoration-color:var(--signal); }
+.visit:hover{ color:var(--signal-ink); }
+@media (max-width:900px){ .proj{ grid-template-columns:1fr; gap:30px; padding:40px 0; } .proj.flip .screen{ order:0; } }
+
+/* more grid */
+.more-title{ font-family:var(--display); font-weight:600; font-size:28px; letter-spacing:-.02em; margin:96px 0 28px; }
+.minis{ display:grid; grid-template-columns:repeat(5, 1fr); gap:24px; }
+@media (max-width:1000px){ .minis{ grid-template-columns:repeat(2, 1fr); } }
+.mini{ text-decoration:none; display:block; }
+.mini img{ width:100%; height:auto; border-radius:10px; aspect-ratio:16/10; object-fit:cover; object-position:top; border:1px solid #D4DBE0; transition:transform .3s; }
+.mini:hover img{ transform:translateY(-4px); }
+.mini-name{ display:block; font-weight:600; margin-top:14px; }
+.mini-line{ display:block; font-size:14.5px; color:var(--muted); margin-top:4px; line-height:1.5; }
+
+/* passion folder */
+#passion{ background:var(--paper-2); }
+.folder{ position:relative; }
+.tabs{ display:flex; gap:6px; padding-left:18px; flex-wrap:wrap; }
+.tabs button{ font:600 16px/1 var(--text); color:var(--ink); background:var(--manila-2); border:0; cursor:pointer;
+              padding:16px 26px 18px; border-radius:14px 14px 0 0; position:relative; top:2px; opacity:.72; transition:opacity .2s, background .2s; }
+.tabs button[aria-selected="true"]{ background:var(--manila); opacity:1; }
+.tabs button:hover{ opacity:1; }
+.folder-body{ background:var(--manila); border-radius:4px 18px 18px 18px; padding:22px; box-shadow:0 30px 60px -40px rgba(80,60,20,.5); }
+.panel{ background:var(--white); border-radius:10px; padding:clamp(22px, 4vw, 52px); display:grid;
+        grid-template-columns:minmax(0, 5fr) minmax(0, 7fr); gap:28px 56px; align-items:start;
+        animation:slip .45s cubic-bezier(.2,.8,.2,1); }
+.panel[hidden]{ display:none; }
+@keyframes slip{ from{ transform:translateY(14px); opacity:0; } to{ transform:none; opacity:1; } }
+@media (prefers-reduced-motion: reduce){ .panel{ animation:none; } }
+.kind{ display:inline-block; font-size:14px; font-weight:600; color:var(--signal-ink); background:#FCE9E1; padding:5px 12px; border-radius:999px; }
+.panel h3{ font-family:var(--display); font-weight:800; font-size:clamp(28px, 3vw, 40px); line-height:1.02; letter-spacing:-.025em; margin:16px 0 4px; }
+.how{ margin:20px 0 0 18px; color:#2C3A45; }
+.how li{ margin-top:6px; padding-left:4px; }
+.private{ margin-top:22px; font-size:14.5px; color:var(--muted); border-left:3px solid var(--manila-2); padding-left:12px; }
+.thumbs{ grid-column:1 / -1; display:grid; grid-template-columns:repeat(3, 1fr); gap:18px; }
+.thumbs img{ width:100%; height:auto; border-radius:8px; border:1px solid #DCE2E6; aspect-ratio:16/10; object-fit:cover; object-position:top; }
+.phones{ display:flex; gap:18px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:10px; -webkit-overflow-scrolling:touch; }
+.phone{ flex:0 0 clamp(150px, 15vw, 196px); scroll-snap-align:start; border:7px solid var(--ink); border-radius:30px; overflow:hidden; background:var(--ink); aspect-ratio:390/844; }
+.phone img, .phone video{ width:100%; height:100%; object-fit:cover; object-position:top; }
+@media (max-width:900px){ .panel{ grid-template-columns:1fr; } .thumbs{ grid-template-columns:1fr 1fr; } .tabs{ padding-left:8px; } .tabs button{ padding:13px 16px 15px; font-size:14.5px; } }
+
+/* on request */
+.request{ background:var(--ink); color:var(--paper); }
+.request h2{ font-family:var(--display); font-weight:800; font-size:clamp(40px, 6vw, 92px); line-height:.95; letter-spacing:-.035em; max-width:14ch; }
+.request p{ color:#B8C4CC; font-size:19px; max-width:38em; margin-top:28px; }
+.request .ctas{ display:flex; flex-wrap:wrap; gap:12px; margin-top:40px; }
+.request .btn.line{ border-color:var(--paper); }
+.request .btn.line:hover{ background:var(--paper); color:var(--ink); }
+.kinds{ display:flex; flex-wrap:wrap; gap:10px; margin-top:44px; list-style:none; }
+.kinds li{ border:1px solid #33424E; color:#D3DCE2; padding:8px 14px; border-radius:999px; font-size:15px; }
+
+/* contact */
+.contact{ padding:96px 0 56px; }
+.contact-grid{ display:grid; grid-template-columns:1.2fr 1fr; gap:48px; align-items:end; }
+.contact h2{ font-family:var(--display); font-weight:800; font-size:clamp(36px, 4.6vw, 64px); line-height:1; letter-spacing:-.03em; }
+.lines{ list-style:none; font-size:19px; }
+.lines li{ padding:14px 0; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+.lines span{ color:var(--muted); }
+.lines a{ font-weight:600; text-decoration:none; }
+.lines a:hover{ color:var(--signal-ink); }
+footer{ padding:40px 0; font-size:14px; color:var(--muted); }
+footer .wrap{ display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+@media (max-width:760px){ .contact-grid{ grid-template-columns:1fr; } .lines{ font-size:17px; } }
+</style>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Adonias Nigussie</a>
+    <ul>
+      <li class="hide-sm"><a href="#work">Client work</a></li>
+      <li class="hide-sm"><a href="#passion">Passion projects</a></li>
+      <li class="hide-sm"><a href="#contact">Contact</a></li>
+      <li><a class="btn sm line" href="Adonias_Nigussie_Website_Portfolio.pdf" download>Download PDF</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="top">
+<header class="hero">
+  <canvas id="ring" aria-label="A ring of website screenshots. Drag to spin it, click one to jump to that project." role="img"></canvas>
+  <div class="hero-fade" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <h1>Websites that move. <span class="l2">And get found.</span></h1>
+      <p class="lede">I'm Adonias Nigussie, a web developer in Addis Ababa. I design and build sites with 3D, motion and real SEO behind them, for schools, contractors, software companies and shops in Ethiopia, the UK and Italy.</p>
+      <div class="ctas">
+        <a class="btn solid" href="#work">See the work</a>
+        <a class="btn line" href="Adonias_Nigussie_Website_Portfolio.pdf" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 21h16"/></svg>
+          Download the PDF
+        </a>
+      </div>
+      <p class="hint">30+ websites built. Drag the screens to spin them.</p>
+    </div>
+  </div>
+</header>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head">
+      <h2>Client work</h2>
+      <p>Each recording is the live site, scrolled the way a visitor would. What I did, what it runs on, and what changed for the client.</p>
+    </div>
+    
+    <article class="proj" id="inteltech">
+      <figure class="screen"><div class="bar"><span class="addr">inteltech.et</span></div><div class="view"><video muted loop playsinline preload="none" poster="media/inteltech.jpg" aria-label="Screen recording of Inteltech"><source src="media/inteltech.mp4" type="video/mp4"></video></div></figure>
+      <div class="proj-text">
+        <p class="sector">Software and ERP, Ethiopia</p>
+        <h3>Inteltech</h3>
+        <p class="role">Full rebuild, solo: design system, front end, 3D hero, SEO, blog</p>
+        <p class="note">A software company selling ERP to manufacturers and traders. I rebuilt their approved design from scratch as a static site: 15 pages, an interactive 3D logo in the hero, a circuit-style wave field behind the dark sections, and a blog built around the questions ERP buyers search for.</p>
+        <div class="mets"><div><b>15</b><span>pages</span></div><div><b>99-100</b><span>Lighthouse scores</span></div><div><b>8</b><span>blog posts</span></div></div>
+        <ul class="stack" aria-label="Built with"><li>Astro</li><li>Three.js</li><li>Anime.js</li><li>Web3Forms</li></ul>
+        <a class="visit" href="https://inteltech.et" target="_blank" rel="noopener">Visit inteltech.et</a>
+      </div>
+    </article>
+    <article class="proj flip" id="nucleus">
+      <figure class="screen"><div class="bar"><span class="addr">nucleusinternationalschoolsystem.com</span></div><div class="view"><video muted loop playsinline preload="none" poster="media/nucleus.jpg" aria-label="Screen recording of Nucleus International Schools"><source src="media/nucleus.mp4" type="video/mp4"></video></div></figure>
+      <div class="proj-text">
+        <p class="sector">Education, Ethiopia</p>
+        <h3>Nucleus International Schools</h3>
+        <p class="role">Full build, solo: design, front end, back end, SEO</p>
+        <p class="note">A 46-page school site taken from blank page to launch on my own. It reached the top 3 on Google for 8 target keywords within two months, and was built for AI answer engines from day one.</p>
+        <div class="mets"><div><b>46</b><span>pages</span></div><div><b>8</b><span>keywords in Google&#x27;s top 3</span></div><div><b>2 months</b><span>to rank</span></div></div>
+        <ul class="stack" aria-label="Built with"><li>Next.js</li><li>Payload CMS</li><li>React</li><li>Tailwind</li></ul>
+        <a class="visit" href="https://nucleusinternationalschoolsystem.com" target="_blank" rel="noopener">Visit nucleusinternationalschoolsystem.com</a>
+      </div>
+    </article>
+    <article class="proj" id="ethiolifecare">
+      <figure class="screen"><div class="bar"><span class="addr">ethiolifecare.com</span></div><div class="view"><video muted loop playsinline preload="none" poster="media/ethiolifecare.jpg" aria-label="Screen recording of EthioLifecare"><source src="media/ethiolifecare.mp4" type="video/mp4"></video></div></figure>
+      <div class="proj-text">
+        <p class="sector">Healthcare supply, Ethiopia</p>
+        <h3>EthioLifecare</h3>
+        <p class="role">Full build and redesign, plus an ongoing SEO retainer</p>
+        <p class="note">Ethiopia&#x27;s supplier of medicines and medical equipment to hospitals, pharmacies and NGOs. I built the site, gave it a full redesign this year, and still run its search work every month.</p>
+        <div class="mets"><div><b>Redesigned</b><span>2026</span></div><div><b>Monthly</b><span>SEO retainer</span></div></div>
+        <ul class="stack" aria-label="Built with"><li>WordPress</li><li>Custom CSS</li><li>Technical SEO</li></ul>
+        <a class="visit" href="https://ethiolifecare.com" target="_blank" rel="noopener">Visit ethiolifecare.com</a>
+      </div>
+    </article>
+    <article class="proj flip" id="agc">
+      <figure class="screen"><div class="bar"><span class="addr">advancedgeneralcontractor.com</span></div><div class="view"><video muted loop playsinline preload="none" poster="media/agc.jpg" aria-label="Screen recording of Advanced General Contractor"><source src="media/agc.mp4" type="video/mp4"></video></div></figure>
+      <div class="proj-text">
+        <p class="sector">Construction, Ethiopia</p>
+        <h3>Advanced General Contractor</h3>
+        <p class="role">Full build, solo: custom front end, custom admin, SEO</p>
+        <p class="note">A Grade One contractor wanted easy editing without a heavy CMS. I hand-wrote the site and built a custom admin behind it, so the team edits every page the way they would in WordPress.</p>
+        <div class="mets"><div><b>100%</b><span>custom code</span></div><div><b>Own</b><span>admin panel</span></div></div>
+        <ul class="stack" aria-label="Built with"><li>Hand-coded front end</li><li>Custom CMS</li><li>In-template SEO</li></ul>
+        <a class="visit" href="https://advancedgeneralcontractor.com" target="_blank" rel="noopener">Visit advancedgeneralcontractor.com</a>
+      </div>
+    </article>
+    <article class="proj" id="mekaneselam">
+      <figure class="screen"><div class="bar"><span class="addr">mekaneselamss.com</span></div><div class="view"><video muted loop playsinline preload="none" poster="media/mekaneselam.jpg" aria-label="Screen recording of Mekane Selam Senbet School"><source src="media/mekaneselam.mp4" type="video/mp4"></video></div></figure>
+      <div class="proj-text">
+        <p class="sector">Community school, Ethiopia</p>
+        <h3>Mekane Selam Senbet School</h3>
+        <p class="role">Full build, solo: ERP back end, hand-coded front end</p>
+        <p class="note">A full ERP for members, attendance and reports, under a bilingual front end that switches between English and Amharic on the page without a reload.</p>
+        <div class="mets"><div><b>2</b><span>languages, live switch</span></div><div><b>Full</b><span>ERP back end</span></div></div>
+        <ul class="stack" aria-label="Built with"><li>Custom ERP</li><li>Hand-coded front end</li><li>English and Amharic</li></ul>
+        <a class="visit" href="https://mekaneselamss.com" target="_blank" rel="noopener">Visit mekaneselamss.com</a>
+      </div>
+    </article>
+    <article class="proj flip" id="cribcrm">
+      <figure class="screen"><div class="bar"><span class="addr">cribcrm.com</span></div><div class="view"><video muted loop playsinline preload="none" poster="media/cribcrm.jpg" aria-label="Screen recording of Crib CRM"><source src="media/cribcrm.mp4" type="video/mp4"></video></div></figure>
+      <div class="proj-text">
+        <p class="sector">SaaS</p>
+        <h3>Crib CRM</h3>
+        <p class="role">Product front end solo, back end with the product team</p>
+        <p class="note">A CRM for network-marketing teams. I own the product front end and shipped two features end to end: the email automation engine and the funnel builder.</p>
+        <div class="mets"><div><b>2</b><span>features shipped end to end</span></div><div><b>Live</b><span>SaaS product</span></div></div>
+        <ul class="stack" aria-label="Built with"><li>React</li><li>Node</li><li>Email automation</li><li>Funnel builder</li></ul>
+        <a class="visit" href="https://cribcrm.com" target="_blank" rel="noopener">Visit cribcrm.com</a>
+      </div>
+    </article>
+    <article class="proj" id="intelmotion">
+      <figure class="screen"><div class="bar"><span class="addr">intelmotionlifts.com</span></div><div class="view"><video muted loop playsinline preload="none" poster="media/intelmotion.jpg" aria-label="Screen recording of IntelMotion Lifts"><source src="media/intelmotion.mp4" type="video/mp4"></video></div></figure>
+      <div class="proj-text">
+        <p class="sector">Industrial, Ethiopia</p>
+        <h3>IntelMotion Lifts</h3>
+        <p class="role">Branding, social media and full website build</p>
+        <p class="note">Ethiopia&#x27;s lift and escalator provider, with 300+ projects delivered. Full website build plus the brand and social media around it.</p>
+        <div class="mets"><div><b>300+</b><span>projects showcased</span></div><div><b>Brand</b><span>and social</span></div></div>
+        <ul class="stack" aria-label="Built with"><li>WordPress</li><li>SEO</li><li>Content</li></ul>
+        <a class="visit" href="https://intelmotionlifts.com" target="_blank" rel="noopener">Visit intelmotionlifts.com</a>
+      </div>
+    </article>
+    <article class="proj flip" id="adoniascodes">
+      <figure class="screen"><div class="bar"><span class="addr">adoniascodes.github.io</span></div><div class="view"><video muted loop playsinline preload="none" poster="media/adoniascodes.jpg" aria-label="Screen recording of Adonias Codes"><source src="media/adoniascodes.mp4" type="video/mp4"></video></div></figure>
+      <div class="proj-text">
+        <p class="sector">My own site</p>
+        <h3>Adonias Codes</h3>
+        <p class="role">Hand-built, deployed on every push</p>
+        <p class="note">My own site, with a 3D growth terrain in the hero. Green on all three Core Web Vitals, and it ships JSON-LD, a sitemap, robots.txt and llms.txt.</p>
+        <div class="mets"><div><b>3 of 3</b><span>Core Web Vitals green</span></div><div><b>CI/CD</b><span>on every push</span></div></div>
+        <ul class="stack" aria-label="Built with"><li>Astro</li><li>Three.js</li><li>GSAP</li><li>GitHub Actions</li></ul>
+        <a class="visit" href="https://adoniascodes.github.io" target="_blank" rel="noopener">Visit adoniascodes.github.io</a>
+      </div>
+    </article>
+    <h3 class="more-title">More client sites</h3>
+    <div class="minis">
+      <a class="mini" href="https://electriccarchargersuk.co.uk" target="_blank" rel="noopener">
+        <img src="shots/eccuk.png" alt="Home page of Electric Car Chargers UK" loading="lazy" width="1440" height="900">
+        <span class="mini-name">Electric Car Chargers UK</span>
+        <span class="mini-line">Content and SEO for UK commercial EV charging: 14 keywords in Google&#x27;s top 3, sales up about 70%.</span>
+      </a>
+      <a class="mini" href="https://acrylate.it" target="_blank" rel="noopener">
+        <img src="shots/acrylate.png" alt="Home page of Acrylate" loading="lazy" width="1440" height="900">
+        <span class="mini-name">Acrylate</span>
+        <span class="mini-line">An Italian online store for personalised gifts, built end to end on my own.</span>
+      </a>
+      <a class="mini" href="https://ayatrealestate.com" target="_blank" rel="noopener">
+        <img src="shots/ayat.png" alt="Home page of Ayat Real Estate" loading="lazy" width="1440" height="900">
+        <span class="mini-name">Ayat Real Estate</span>
+        <span class="mini-line">Development and SEO for one of Ethiopia&#x27;s largest property developers: organic traffic up about 30%.</span>
+      </a>
+      <a class="mini" href="https://bluesky.et" target="_blank" rel="noopener">
+        <img src="shots/bluesky.png" alt="Home page of Blue Sky Real Estate" loading="lazy" width="1440" height="900">
+        <span class="mini-name">Blue Sky Real Estate</span>
+        <span class="mini-line">Content strategy and SEO behind the property listing pages.</span>
+      </a>
+      <a class="mini" href="https://gashuna.com" target="_blank" rel="noopener">
+        <img src="shots/gashuna.png" alt="Home page of Gashuna Coffee" loading="lazy" width="1440" height="900">
+        <span class="mini-name">Gashuna Coffee</span>
+        <span class="mini-line">Brand, social media and a full website for an Ethiopian speciality coffee brand.</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="passion">
+  <div class="wrap">
+    <div class="head">
+      <h2>Passion projects</h2>
+      <p>Things I built because I wanted them to exist. No client brief, so this is where I try the hardest ideas first.</p>
+    </div>
+    <div class="folder">
+      <div class="tabs" role="tablist" aria-label="Passion projects"><button role="tab" id="tab-hermella" aria-controls="pan-hermella" aria-selected="true" tabindex="0">Hermella&#x27;s studio site</button><button role="tab" id="tab-amore" aria-controls="pan-amore" aria-selected="false" tabindex="-1">Amore Movies</button><button role="tab" id="tab-jobportal" aria-controls="pan-jobportal" aria-selected="false" tabindex="-1">Job portal</button></div>
+      <div class="folder-body">
+      <div role="tabpanel" id="pan-hermella" aria-labelledby="tab-hermella" class="panel">
+        <div class="panel-head">
+          <p class="kind">Architecture portfolio with a 3D hero</p>
+          <h3>A portfolio for an architect</h3>
+          <p class="note">A personal site for an architect. As you scroll, a 3D house turns, splits into its four layers, then lifts the upper floors away to show the ground plan. Her photo stands inside the model as the human for scale. After that: a project gallery that tilts in 3D, her quote revealed word by word, and a downloadable lookbook.</p>
+          <ul class="how"><li>React and Vite, with the 3D built in Three.js (React Three Fiber)</li><li>The house is generated in code, not a downloaded model</li><li>The 3D part loads only when needed, so the page stays fast</li><li>Gallery scrolls on desktop and swipes on phones</li></ul>
+          <p class="private">Private project, so there is no public link. I can walk you through it live on a call.</p>
+        </div>
+        <figure class="screen"><div class="bar"></div><div class="view"><video muted loop playsinline preload="none" poster="media/hermella.jpg" aria-label="Screen recording of A portfolio for an architect"><source src="media/hermella.mp4" type="video/mp4"></video></div></figure>
+        
+      </div>
+      <div role="tabpanel" id="pan-amore" aria-labelledby="tab-amore" class="panel" hidden>
+        <div class="panel-head">
+          <p class="kind">Private app for two, installs on a phone</p>
+          <h3>A movie night app for a couple</h3>
+          <p class="note">Two people who can never decide what to watch each swipe on movies. When both like the same one, the app shows &quot;It&#x27;s a match&quot; on both phones at once and adds it to tonight&#x27;s shortlist. It also tracks what they are watching, shows shared taste stats, and has an AI helper that turns a plain request (&quot;something funny, under two hours&quot;) into picks with a reason for each.</p>
+          <ul class="how"><li>Next.js app that installs to the home screen like a native app</li><li>Supabase for login and a shared database; both phones update in about 1.4 seconds</li><li>Push notifications sent from the database itself, so they arrive even on bad networks</li><li>Each person chooses which alerts they get</li></ul>
+          <p class="private">Private project, so there is no public link. I can walk you through it live on a call.</p>
+        </div>
+        
+        <div class="phones"><figure class="phone"><video muted loop playsinline preload="none" poster="media/amore-1.jpg" aria-label="Recording of Amore Movies in use"><source src="media/amore.mp4" type="video/mp4"></video></figure><figure class="phone"><img src="media/amore-1.jpg" alt="Amore Movies screen 1" loading="lazy"></figure><figure class="phone"><img src="media/amore-2.jpg" alt="Amore Movies screen 2" loading="lazy"></figure><figure class="phone"><img src="media/amore-3.jpg" alt="Amore Movies screen 3" loading="lazy"></figure><figure class="phone"><img src="media/amore-4.jpg" alt="Amore Movies screen 4" loading="lazy"></figure><figure class="phone"><img src="media/amore-5.jpg" alt="Amore Movies screen 5" loading="lazy"></figure></div>
+      </div>
+      <div role="tabpanel" id="pan-jobportal" aria-labelledby="tab-jobportal" class="panel" hidden>
+        <div class="panel-head">
+          <p class="kind">Personal tool: data pipeline with AI</p>
+          <h3>A job portal that reads the job market for me</h3>
+          <p class="note">Every morning and evening it pulls new remote jobs from public job feeds and Telegram channels, keeps only jobs open to someone in Ethiopia, and scores each one against my CVs. It flags stale and fake-looking posts, shows which skills the best jobs ask for that my CV lacks, and drafts a tailored cover letter and CV for a job in the background.</p>
+          <ul class="how"><li>Python (FastAPI) with HTMX pages and a SQLite database</li><li>Runs on a schedule twice a day</li><li>AI drafting runs in a background queue, so the page never freezes</li><li>Tailored CVs come out as clean PDFs</li></ul>
+          <p class="private">Private project, so there is no public link. I can walk you through it live on a call.</p>
+        </div>
+        <figure class="screen"><div class="bar"></div><div class="view"><video muted loop playsinline preload="none" poster="media/jobportal-1.jpg" aria-label="Screen recording of A job portal that reads the job market for me"><source src="media/jobportal.mp4" type="video/mp4"></video></div></figure>
+        <div class="thumbs"><img src="media/jobportal-1.jpg" alt="A job portal that reads the job market for me, view 1" loading="lazy"><img src="media/jobportal-2.jpg" alt="A job portal that reads the job market for me, view 2" loading="lazy"><img src="media/jobportal-3.jpg" alt="A job portal that reads the job market for me, view 3" loading="lazy"></div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="request">
+  <div class="wrap">
+    <h2>You're looking at 16 of 30+.</h2>
+    <p>The rest are presented on request: landing pages, online stores, school systems, internal tools and company sites. Tell me what you are building and I will show you the ones closest to it.</p>
+    <ul class="kinds" aria-label="Other kinds of work">
+      <li>Landing pages</li><li>E-commerce</li><li>School ERPs</li><li>Real estate listings</li><li>Bilingual sites</li><li>Dashboards and internal tools</li><li>SEO retainers</li>
+    </ul>
+    <div class="ctas">
+      <a class="btn solid" href="mailto:adoniasnigussie@gmail.com?subject=Website%20project">Ask for more work</a>
+      <a class="btn line" href="Adonias_Nigussie_Website_Portfolio.pdf" download>Download the PDF</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap contact-grid">
+    <h2>Have a website in mind? Let's talk about it.</h2>
+    <ul class="lines">
+      <li><span>Email</span><a href="mailto:adoniasnigussie@gmail.com">adoniasnigussie@gmail.com</a></li>
+      <li><span>Phone and WhatsApp</span><a href="tel:+251944721682">+2519 44 72 16 82</a></li>
+      <li><span>GitHub</span><a href="https://github.com/AdoniasCodes" target="_blank" rel="noopener">github.com/AdoniasCodes</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/adoniasn" target="_blank" rel="noopener">linkedin.com/in/adoniasn</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>Adonias Nigussie, web developer, Addis Ababa (GMT+3)</span><a href="https://adoniascodes.github.io/">adoniascodes.github.io</a></div></footer>
+
+<script>
+// nav border on scroll
+const nav = document.querySelector('.nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 8), {passive:true});
+
+// play recordings only while on screen
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const vids = document.querySelectorAll('video');
+if (reduce) { vids.forEach(v => v.controls = true); }
+else {
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    const v = en.target;
+    if (en.isIntersecting) { if (v.preload === 'none') { v.preload = 'auto'; v.load(); } v.play().catch(()=>{}); }
+    else v.pause();
+  }), {threshold:.35});
+  vids.forEach(v => io.observe(v));
+}
+
+// folder tabs (keyboard: arrows, Home, End)
+const tabs = [...document.querySelectorAll('[role=tab]')];
+function pick(t){
+  tabs.forEach(x => { const on = x === t; x.setAttribute('aria-selected', on); x.tabIndex = on ? 0 : -1;
+    const p = document.getElementById(x.getAttribute('aria-controls')); p.hidden = !on;
+    p.querySelectorAll('video').forEach(v => on ? (v.preload='auto', v.play().catch(()=>{})) : v.pause()); });
+  t.focus();
+}
+tabs.forEach((t, i) => {
+  t.addEventListener('click', () => pick(t));
+  t.addEventListener('keydown', ev => {
+    const k = {ArrowRight:i+1, ArrowLeft:i-1, Home:0, End:tabs.length-1}[ev.key];
+    if (k === undefined) return; ev.preventDefault(); pick(tabs[(k + tabs.length) % tabs.length]);
+  });
+});
+</script>
+<script type="module">
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js';
+const ITEMS = [{"src": "media/inteltech.jpg", "url": "inteltech.et", "href": "#inteltech"}, {"src": "media/nucleus.jpg", "url": "nucleusinternationalschoolsystem.com", "href": "#nucleus"}, {"src": "media/hermella.jpg", "url": "studio portfolio", "href": "#passion"}, {"src": "media/ethiolifecare.jpg", "url": "ethiolifecare.com", "href": "#ethiolifecare"}, {"src": "media/agc.jpg", "url": "advancedgeneralcontractor.com", "href": "#agc"}, {"src": "media/mekaneselam.jpg", "url": "mekaneselamss.com", "href": "#mekaneselam"}, {"src": "media/cribcrm.jpg", "url": "cribcrm.com", "href": "#cribcrm"}, {"src": "media/intelmotion.jpg", "url": "intelmotionlifts.com", "href": "#intelmotion"}, {"src": "media/adoniascodes.jpg", "url": "adoniascodes.github.io", "href": "#adoniascodes"}, {"src": "shots/eccuk.png", "url": "electriccarchargersuk.co.uk", "href": "#work"}, {"src": "shots/acrylate.png", "url": "acrylate.it", "href": "#work"}, {"src": "shots/ayat.png", "url": "ayatrealestate.com", "href": "#work"}, {"src": "shots/bluesky.png", "url": "bluesky.et", "href": "#work"}, {"src": "shots/gashuna.png", "url": "gashuna.com", "href": "#work"}];
+const canvas = document.getElementById('ring');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let renderer;
+try { renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true}); }
+catch (e) { canvas.remove(); }
+if (renderer) {
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0xE6EAEC, 16, 34);
+  const camera = new THREE.PerspectiveCamera(36, 1, .1, 100);
+  camera.position.set(0, 1.4, 15);
+  const ring = new THREE.Group(); scene.add(ring);
+  const N = ITEMS.length, W = 3.9, H = W * (700/1024);
+  let RX = 3.4, RZ = 10;
+  const meshes = [];
+
+  function frameTexture(img, url){
+    const c = document.createElement('canvas'); c.width = 1024; c.height = 700;
+    const g = c.getContext('2d'), r = 26, bar = 52;
+    g.beginPath(); g.roundRect(0, 0, 1024, 700, r); g.clip();
+    g.fillStyle = '#F4F6F7'; g.fillRect(0, 0, 1024, bar);
+    g.fillStyle = '#FFFFFF'; g.beginPath(); g.roundRect(312, 12, 400, 28, 8); g.fill();
+    g.fillStyle = '#55646F'; g.font = '500 17px "Hanken Grotesk", system-ui, sans-serif'; g.textAlign = 'center';
+    g.fillText(url, 512, 32);
+    const s = Math.max(1024 / img.width, (700 - bar) / img.height);
+    g.drawImage(img, 0, 0, img.width, (700 - bar) / s, 0, bar, 1024, 700 - bar);
+    const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace;
+    t.anisotropy = renderer.capabilities.getMaxAnisotropy(); return t;
+  }
+  const geo = new THREE.PlaneGeometry(W, H);
+  ITEMS.forEach((it, i) => {
+    const mat = new THREE.MeshBasicMaterial({color:0xDDE3E7, transparent:true});
+    const m = new THREE.Mesh(geo, mat);
+    m.userData = {href:it.href, base:i / N * Math.PI * 2, y:Math.sin(i * 1.7) * .7, i};
+    ring.add(m); meshes.push(m);
+    const img = new Image(); img.onload = () => { mat.map = frameTexture(img, it.url); mat.color.set(0xffffff); mat.needsUpdate = true; };
+    img.src = it.src;
+  });
+
+  let rot = 0, vel = reduce ? 0 : .0022, auto = reduce ? 0 : .0022, dragging = false, lastX = 0, moved = 0, hover = null;
+  const ray = new THREE.Raycaster(), ptr = new THREE.Vector2(-9, -9), tilt = {x:0, y:0};
+  function size(){
+    const w = canvas.clientWidth, h = canvas.clientHeight;
+    renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+    const wide = w > 900;
+    RX = wide ? 2.9 : 1.6; RZ = wide ? 10 : 8;
+    ring.position.set(wide ? 5.6 : 0, wide ? -.2 : .4, -7);
+    camera.position.z = wide ? 15 : 13;
+  }
+  addEventListener('resize', size); size();
+  function setPtr(ev){ const b = canvas.getBoundingClientRect(); ptr.x = (ev.clientX - b.left) / b.width * 2 - 1; ptr.y = -(ev.clientY - b.top) / b.height * 2 + 1; }
+  canvas.addEventListener('pointerdown', ev => { dragging = true; lastX = ev.clientX; moved = 0; canvas.classList.add('dragging'); });
+  addEventListener('pointerup', () => {
+    if (dragging && moved < 6 && hover) location.hash = hover.userData.href;
+    dragging = false; canvas.classList.remove('dragging');
+  });
+  addEventListener('pointermove', ev => {
+    setPtr(ev); tilt.x = ptr.x; tilt.y = ptr.y;
+    if (!dragging) return;
+    const dx = ev.clientX - lastX; lastX = ev.clientX; moved += Math.abs(dx);
+    vel = dx * .004;
+  });
+
+  let visible = true;
+  new IntersectionObserver(es => visible = es[0].isIntersecting).observe(canvas);
+  const clock = new THREE.Clock();
+  function tick(){
+    requestAnimationFrame(tick);
+    if (!visible) return;
+    const t = clock.getElapsedTime();
+    if (!dragging) vel += (auto - vel) * .03;
+    rot += vel;
+    meshes.forEach(m => {
+      const a = m.userData.base + rot;
+      m.position.set(Math.sin(a) * RX, m.userData.y + (reduce ? 0 : Math.sin(t * .6 + m.userData.i) * .12), Math.cos(a) * RZ);
+      m.rotation.y = -Math.sin(a) * .55;
+    });
+    ring.rotation.x += ((tilt.y * .05 + .08) - ring.rotation.x) * .05;
+    camera.position.x += ((tilt.x * .7) - camera.position.x) * .04;
+    camera.lookAt(ring.position.x * .45, 0, 0);
+    ray.setFromCamera(ptr, camera);
+    const hit = ray.intersectObjects(meshes)[0];
+    const h = hit ? hit.object : null;
+    if (h !== hover) { hover = h; canvas.style.cursor = h ? 'pointer' : ''; }
+    meshes.forEach(m => { const s = m === hover ? 1.06 : 1; m.scale.x += (s - m.scale.x) * .15; m.scale.y = m.scale.x; });
+  renderer.render(scene, camera);
+  }
+  tick();
+}
+</script>
+</body>
+</html>
