@@ -6,6 +6,7 @@ const sites={
  adoniascodes:['https://adoniascodes.github.io/',1],
  inteltech:['https://inteltech.et/',1],
  nucleus:['https://nucleusinternationalschoolsystem.com/',0],
+ preschool:['https://nucleusinternationalpreschool.com/',0],
  agc:['https://advancedgeneralcontractor.com/',0],
  mekaneselam:['https://mekaneselamss.com/',0],
  cribcrm:['https://cribcrm.com/',0],

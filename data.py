@@ -53,6 +53,13 @@ CLIENTS = [
          note="Ethiopia's lift and escalator provider, with 300+ projects delivered. Full website build plus "
               "the brand and social media around it.",
          metrics=[("300+", "projects showcased"), ("Brand", "and social")]),
+    dict(slug="preschool", name="Nucleus International Preschool", url="nucleusinternationalpreschool.com",
+         sector="Early education, Ethiopia", role="Full build, solo: design, front end, SEO",
+         stack=["Next.js", "React", "Technical SEO"],
+         note="A separate site for the preschool and KG campus in Bisrate Gebriel, built on its own domain "
+              "and linked to the main Nucleus school site. It walks parents from Preschool to KG to Year 2, "
+              "with booking and registration built in.",
+         metrics=[("21", "pages"), ("Own", "domain, linked to the main school site")]),
     dict(slug="adoniascodes", name="Adonias Codes", url="adoniascodes.github.io", sector="My own site",
          role="Hand-built, deployed on every push", stack=["Astro", "Three.js", "GSAP", "GitHub Actions"],
          note="My own site, with a 3D growth terrain in the hero. Green on all three Core Web Vitals, and it "
